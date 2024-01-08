@@ -10,7 +10,7 @@ In this scenario, a prospective app developer has approached me to better unders
 
 ## Dataset
 
-[App Store Dataset]([url](https://drive.google.com/drive/folders/14O9xB8N1gXN_67ouphImQkvpzyitmTfR))
+[App Store Dataset](https://drive.google.com/drive/folders/14O9xB8N1gXN_67ouphImQkvpzyitmTfR)
 
 
 
@@ -25,7 +25,8 @@ In this scenario, a prospective app developer has approached me to better unders
 6) Average rating for an app in the App Store is 3.5 stars. 
 
 
-Final Recommendations:
+#0969DA Final Recommendations:
+
 Though ‘Games’ and ‘Entertainment’ apps have proven to be more popular, ***I recommend diving into the untapped market of either ‘Finance’ or ‘Books’***. Still existing within the Top 10 app categories, these niches have sizable audiences that are clearly dissatisfied with the current offerings, suggesting ***increased opportunity for market penetration*** with a quality app. 
 
 Once developed, I recommend spending time ***curating a well-crafted app description***, setting clear expectations and detailing all of the primary features of the app. Aim for anywhere between 10 and 30 supported languages as this language bucket has the highest average ratings, however, not much time needs to be spent on this aspect of the app as there is no clear correlation observed. Lastly, a goal of above 3.5 stars, the average rating for an app in the store, can be set in order to be considered a successful app launch.
