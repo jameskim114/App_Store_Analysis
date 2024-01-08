@@ -25,7 +25,7 @@ In this scenario, a prospective app developer has approached me to better unders
 6) Average rating for an app in the App Store is 3.5 stars. 
 
 
-#0969DA Final Recommendations:
+Final Recommendations:
 
 Though ‘Games’ and ‘Entertainment’ apps have proven to be more popular, ***I recommend diving into the untapped market of either ‘Finance’ or ‘Books’***. Still existing within the Top 10 app categories, these niches have sizable audiences that are clearly dissatisfied with the current offerings, suggesting ***increased opportunity for market penetration*** with a quality app. 
 
