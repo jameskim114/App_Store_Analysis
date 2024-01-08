@@ -1,4 +1,4 @@
-##DATA EXPLORATION 
+DATA EXPLORATION 
 
 -- Check # of unique apps in both tables for data verification
 SELECT COUNT(DISTINCT id) AS Unique_App_IDs
@@ -34,7 +34,7 @@ FROM applestore
 
 
 
-##DATA ANALYSIS 
+DATA ANALYSIS 
 
 -- Determine whether paid apps have higher ratings than free apps
 SELECT CASE
