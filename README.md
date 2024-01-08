@@ -1,4 +1,5 @@
-# Project: App Store Analysis for Successful App Launch
+# App Store Analysis for Successful App Launch
+
 
 ## Project Description
 
@@ -6,9 +7,11 @@ In this scenario, a prospective app developer has approached me to better unders
 
 
 
+
 ## Dataset
 
 [App Store Dataset]([url](https://drive.google.com/drive/folders/14O9xB8N1gXN_67ouphImQkvpzyitmTfR))
+
 
 
 
