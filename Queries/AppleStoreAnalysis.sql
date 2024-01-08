@@ -1,0 +1,97 @@
+-- DATA EXPLORATION -- 
+
+-- Check # of unique apps in both tables for data verification
+SELECT COUNT(DISTINCT id) AS Unique_App_IDs
+FROM applestore
+
+SELECT COUNT(DISTINCT id) AS Unique_App_IDs
+FROM descriptions;
+
+-- Check for missing values in key fields 
+SELECT COUNT(*) AS Missing_Values
+FROM applestore
+WHERE track_name IS NULL OR user_rating is NULL OR prime_genre IS NULL
+
+SELECT COUNT(*) AS Missing_Values
+FROM descriptions
+WHERE app_desc IS NULL;
+
+-- # of apps per genre
+SELECT 
+	prime_genre, 
+    COUNT(*) AS Num_Apps
+FROM applestore
+GROUP BY prime_genre
+ORDER BY Num_Apps DESC
+
+-- Overview of ratings
+SELECT 
+	min(user_rating) AS Min_Rating,
+	max(user_rating) AS Max_Rating,
+    avg(user_rating) AS Avg_Rating
+FROM applestore
+
+
+
+-- DATA ANALYSIS -- 
+
+-- Determine whether paid apps have higher ratings than free apps
+SELECT CASE
+		WHEN price > 0 THEN 'Paid'
+		ELSE 'Free'
+    END AS App_Type,
+    avg(user_rating) AS Avg_Rating
+FROM applestore
+GROUP BY App_Type
+
+-- Check if apps with more supported languages have higher ratings
+SELECT CASE
+		WHEN lang_num < 10 THEN '<10 languages'
+        WHEN lang_num BETWEEN 10 AND 30 THEN  '10-30 languages'
+		ELSE '30+ languages'
+	END AS Language_Bucket,
+    avg(user_rating) AS Avg_Rating
+FROM applestore
+GROUP BY Language_Bucket
+ORDER BY Avg_Rating DESC
+
+-- Check genres with low ratings 
+SELECT 
+	prime_genre,
+	avg(user_rating) AS Avg_Rating
+FROM applestore
+GROUP BY prime_genre
+ORDER BY Avg_Rating ASC
+LIMIT 10 
+
+-- Check to see if there is correlation between description length and user rating
+SELECT CASE
+		WHEN length(d.app_desc) < 500 THEN 'Short'
+		WHEN length(d.app_desc) BETWEEN 500 AND 1000 THEN 'Medium'
+		ELSE 'Long'
+	END AS 'Desc_Length', 
+    avg(a.user_rating) AS Avg_Rating
+FROM applestore AS a
+JOIN 
+	descriptions AS d
+ON 
+	a.id = d.id
+GROUP BY Desc_Length
+ORDER BY Avg_Rating DESC
+    
+-- Top-rated apps for each genre
+SELECT
+	prime_genre,
+    track_name,
+    user_rating
+FROM (
+		SELECT
+			prime_genre,
+			track_name,
+			user_rating,
+			RANK() OVER(PARTITION BY prime_genre ORDER BY user_rating DESC, rating_count_tot DESC) AS 'rank'
+		FROM applestore
+        ) AS a
+WHERE 
+	a.rank = 1
+    
