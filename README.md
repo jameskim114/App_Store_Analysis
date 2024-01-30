@@ -3,7 +3,7 @@
 
 ## Project Description
 
-In this hypothetical scenario, a prospective app developer has approached me to better understand the current landscape of the Apple App Store. ***Using mySQL***, I delved into the vast ecosystem of the App Store to better ***understand user reviews, ratings, and overall trends*** in apps and app categories. I conclude this project by providing ***6 data-supported insights***, along with an ***actionable recommendation*** to guide my client to a successful app launch. 
+In this hypothetical scenario, a prospective app developer has approached me to better understand the current landscape of the Apple App Store. ***Using mySQL***, I delved into the vast ecosystem of the App Store to better understand user reviews, ratings, and overall trends in apps and app categories. I conclude this project by providing ***6 data-supported insights***, along with an ***actionable recommendation*** to guide my client to a successful app launch. 
 
 
 
